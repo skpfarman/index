@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="images/stock-photo-2210636.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/Vidhana_Soudha_-_Karnataka_State_Legislative_Assembly.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/Vidhana-Soudha.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+
+
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="images/Home-IMG-2.jpg" alt="Avatar" style="width:100%">
+            <p>I want to borrow some money</p>
+            <a href="">Learn More</a>
+
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="images/Home-IMG-3.jpg" alt="Avatar" style="width:100%">
+            <p>I want to invest some money</p>
+            <a href="">Learn More</a>
+          </div>
+        </div>
+        
+        <div class="column">
+            <h3>Its time to make your money work for you</h3>
+            <p>Over 30 high quality professionally designed pre-built website concepts to choose from. Build your website using a fully visual interface, using our revolutionary page & header builder.</p>
+            <button>VIEW MORE</button>
+        </div>
+          </div>      
+
+<!-- image section -->
+<section>
+    <div style="margin-top: 20px;">
+        <img src="images/screen.JPG" alt="">
+    </div>
+</section>
+
+<section>
+    <div>
+        <p class="worksection">How it Works</p>
+        <p class="processsection">A Simple Process</p>
+    </div>
+
+   
+<div class="row">
+    <div class="column">
+        <div class="sections">
+            <i class="fa fa-child" style="font-size:36px"></i>
+            <p>Sign Up </p>
+            <p>Wireframing has its pros and cons as it the crutial part of the design stage.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="sections">
+            <i class="fa fa-lightbulb-o" style="font-size:36px"></i>
+            <p>Pick your investment </p>
+            <p>Total damage has been caused by the civilians around the new apple store.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="sections">
+            <i class="fa fa-street-view" style="font-size:36px"></i>
+            <p>Watch your wealth grow </p>
+            <p>Total damage has been caused by the civilians around the new apple store.</p>
+        </div>
+      </div>
+      </div>
+</section>
+
+<section>
+    <div class="column">
+       <img class="imagesection" src="images/Home-IMG-5.svg" alt="">
+      </div>
+
+      <div>
+            <p style="font-size: 25px;">Time tested investment methods</p>
+            <p>Over 30 high quality professionally designed pre-built website concepts to choose from. </p>
+            
+      </div>
+</section>
+</body>
+</html>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
